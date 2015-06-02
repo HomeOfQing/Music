@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:choiceMode="singleChoice" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:paddingTop="4dp"
+        android:id="@+id/relative_layout"
+        android:layout_alignBottom="@+id/listView"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="空白格"
+            android:textStyle="bold"
+            android:maxEms="15"
+            android:singleLine="true"
+            android:id="@+id/textView_little_display_name"
+            android:layout_marginBottom="6dp"
+            android:layout_above="@+id/textView_little_artist"
+            android:layout_toEndOf="@+id/imageView_little_album"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="杨宗纬"
+            android:singleLine="true"
+            android:textSize="10sp"
+            android:id="@+id/textView_little_artist"
+            android:layout_above="@+id/progressBar_little"
+            android:layout_alignStart="@+id/textView_little_display_name" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:id="@+id/progressBar_little"
+            android:indeterminate="false"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_little_album"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/about_logo" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_little_next"
+            android:src="@drawable/note_btn_next_white"
+            android:layout_alignTop="@+id/imageButton_little_play"
+            android:layout_alignParentEnd="true"
+            style="@android:style/Widget.DeviceDefault.Button.Borderless.Small" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_little_play"
+            android:src="@drawable/note_btn_play_white"
+            style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
+            android:layout_alignTop="@+id/imageView_little_album"
+            android:layout_toStartOf="@+id/imageButton_little_next" />
+    </RelativeLayout>
+</LinearLayout>

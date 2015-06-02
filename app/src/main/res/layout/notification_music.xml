@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="@android:color/background_dark">
+
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView_noti_album"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/about_logo" />
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textColor="@android:color/white"
+            android:id="@+id/textView_noti_title"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/textView_noti_artist"
+            android:layout_marginTop="9dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textColor="#a4c1adad"
+            android:id="@+id/textView_noti_artist"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="6dp"
+            android:layout_below="@+id/textView_noti_title"
+            android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <ImageButton
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton_noti_love"
+                android:layout_gravity="center"
+                android:src="@drawable/play_icn_loved_prs"
+                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton_noti_pre"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/note_btn_pre"
+                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:id="@+id/imageButton_noti_play"
+                android:layout_weight="1"
+                android:src="@drawable/desklrc_btn_play"
+                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton_noti_next"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/note_btn_next"
+                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored" />
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_noti_cancel"
+            android:src="@drawable/toplay_btn_close_prs"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>
